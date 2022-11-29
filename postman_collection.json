@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "59372a02-9464-4bf0-a9c0-18a6b08503fd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddCandidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Name\": \"Imran\",\r\n        \"Date\": \"2022-11-28\",\r\n        \"POB\": \"CA\",\r\n        \"FilePath\":\"638053118521158877.pdf\",\r\n        \"Department\":\"Job 1\"              \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.29.199:8042/api/Candidate/AddCandidate",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"29",
+						"199"
+					],
+					"port": "8042",
+					"path": [
+						"api",
+						"Candidate",
+						"AddCandidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.29.199:8042/api/Candidate/DeleteCandidate?Id=2",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"29",
+						"199"
+					],
+					"port": "8042",
+					"path": [
+						"api",
+						"Candidate",
+						"DeleteCandidate"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCandidate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.29.199:8042/api/Candidate/GetAllCandidate",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"29",
+						"199"
+					],
+					"port": "8042",
+					"path": [
+						"api",
+						"Candidate",
+						"GetAllCandidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/638052618841857453.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.29.199:8042/api/Candidate/uploadFile",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"29",
+						"199"
+					],
+					"port": "8042",
+					"path": [
+						"api",
+						"Candidate",
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.29.199:8042/api/Candidate/DownloadFile?file=638052353361876255.jpg",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"29",
+						"199"
+					],
+					"port": "8042",
+					"path": [
+						"api",
+						"Candidate",
+						"DownloadFile"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "638052353361876255.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
